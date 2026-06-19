@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Cytat dnia</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#111111">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <div class="container">
+    <button onclick="getRandomQuote()">🎲 Losuj cytat</button>
+    <h1>KOLEJNY CYTAT</h1>
+
+    <div id="quote-box">
+      <p id="quote"></p>
+      
+      <p id="translation"></p>
+      <button onclick="speakQuote()">🔊 Odsłuchaj cytat</button>
+    </div>
+<button onclick="showSong('Por fin')">📖 Pokaż piosenkę</button>
+<button onclick="showSong('Por fin')">📖 Start</button>
+<button onclick="prevLine()">⬅️</button>
+<button onclick="nextLine()">➡️</button>
+<button onclick="startSongQuiz('Por fin')">🎤 Quiz z piosenki</button>
+    <h2>Piosenka</h2>
+<div id="song"></div>
+<h3 id="songProgress"></h3>
+
+    
+  </div>
+<button onclick="saveFavorite()">⭐ Dodaj do ulubionych</button>
+
+<h2>Ulubione</h2>
+<div id="favorites"></div>
+
+<h2>Quiz</h2>
+<div id="quiz" class="card"></div>
+
+<button onclick="startQuiz()">Start quiz</button>
+
+<h3 id="score"></h3>
+<script src="songs.js"></script>
+  <script src="quotes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
