@@ -1,49 +1,299 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Cytat dnia</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#111111">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Player</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#050b1a;
+    color:white;
+    text-align:center;
+}
+
+#box{
+    width:100%;
+    max-width:none;
+    padding:50px;
+    box-sizing:border-box;
+}
+
+#now{
+    font-size:18px;
+    margin:10px 0;
+    color:#4da3ff;
+}
+
+#cover{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:10px;
+    margin:10px auto;
+    display:block;
+}
+
+#progressWrap{
+    width:100%;
+    height:6px;
+    background:#1a2a44;
+    border-radius:10px;
+    overflow:hidden;
+    margin:10px 0;
+    cursor:pointer;
+}
+
+#progress{
+    height:100%;
+    width:0%;
+    background:#4da3ff;
+}
+
+#time{
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+    opacity:0.8;
+}
+
+.row{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+button{
+    flex:1;
+    padding:18px;
+    font-size:22px;
+    border:none;
+    border-radius:10px;
+    background:#1e3a66;
+    color:white;
+}
+
+button.active{
+    box-shadow:0 0 10px #4da3ff;
+    border:2px solid #4da3ff;
+}
+
+.track{
+    background:#111a33;
+    margin:6px;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    max-height:400px;
+    overflow-y:auto;
+    padding:10px;
+    box-sizing:border-box;
+}
+
+h2{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: 3px;
+    margin:0;
+    padding:20px 0;
+    font-size:24px;
+    color:#4da3ff;
+    
+    
+}
+
+
+@media(max-width:600px){
+    #list{ grid-template-columns:repeat(2,1fr); }
+}
+
+audio{ display:none; }
+</style>
 </head>
+
 <body>
 
-  <div class="container">
-    <button onclick="getRandomQuote()">🎲 Losuj cytat</button>
-    <h1>KOLEJNY CYTAT</h1>
+<h2>MARULIEGO PLAYER</h2>
 
-    <div id="quote-box">
-      <p id="quote"></p>
-      
-      <p id="translation"></p>
-      <button onclick="speakQuote()">🔊 Odsłuchaj cytat</button>
-    </div>
-<button onclick="showSong('Por fin')">📖 Pokaż piosenkę</button>
-<button onclick="showSong('Por fin')">📖 Start</button>
-<button onclick="prevLine()">⬅️</button>
-<button onclick="nextLine()">➡️</button>
-<button onclick="startSongQuiz('Por fin')">🎤 Quiz z piosenki</button>
-    <h2>Piosenka</h2>
-<div id="song"></div>
-<h3 id="songProgress"></h3>
+<div id="box">
 
-    
-  </div>
-<button onclick="saveFavorite()">⭐ Dodaj do ulubionych</button>
+<div id="now">vamos</div>
 
-<h2>Ulubione</h2>
-<div id="favorites"></div>
+<img id="cover" src="default.jpg">
 
-<h2>Quiz</h2>
-<div id="quiz" class="card"></div>
+<audio id="audio"></audio>
 
-<button onclick="startQuiz()">Start quiz</button>
+<div id="progressWrap" onclick="seek(event)">
+    <div id="progress"></div>
+</div>
 
-<h3 id="score"></h3>
-<script src="songs.js"></script>
-  <script src="quotes.js"></script>
-  <script src="app.js"></script>
+<div id="time">
+    <span id="cur">0:00</span>
+    <span id="dur">0:00</span>
+</div>
+
+<div class="row">
+<button onclick="toggleShuffle()" id="shuffleBtn">🔀</button>
+<button onclick="togglePlay()">▶</button>
+<button onclick="toggleLoop()" id="loopBtn">🔁</button>
+</div>
+
+<div id="list"></div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+/* TRACKS */
+const tracks = [
+    { name: "JA Lola", artist: "Jay Aliyev", url: "JA Lola.mp3" },
+    { name: "Progressive House", artist: "Unknown", url: "Progressive House.mp3" },
+    { name: "dire straits news", artist: "Dire Straits", url: "news dire straits.mp3" },
+    { name: "JA anymore", artist: "Jay Aliyev", url: "Jay Aliyev anymore.mp3" },
+    { name: "df", artist: "Unknown", url: "df.mp3" },
+    { name: "Pinneaple thief put it right", artist: "The Pineapple Thief", url: "Pinneaple thief put it right.mp3" },
+    { name: "PH yacht", artist: "Unknown", url: "PH yacht.mp3" },
+    { name: "Folding Sky", artist: "Unknown", url: "Folding Sky.mp3" },
+    { name: "JA Diva 3", artist: "Jay Aliyev", url: "JA Diva 3.mp3" },
+    { name: "Emerson", artist: "Emerson", url: "Emerson.mp3" },
+    { name: "genesis tonight tonight", artist: "Genesis", url: "genesis tonight tonight.mp3" }
+];
+
+let current = 0;
+let shuffle = false;
+let loop = true;
+
+const audio = document.getElementById("audio");
+const now = document.getElementById("now");
+const progress = document.getElementById("progress");
+const cur = document.getElementById("cur");
+const dur = document.getElementById("dur");
+const cover = document.getElementById("cover");
+
+/* SAFE CHECK */
+if(!audio || !now || !progress) {
+    console.log("UI not ready");
+    return;
+}
+
+/* PLAY */
+function play(i){
+    current = i;
+
+    audio.src = tracks[i].url;
+    audio.play().catch(e => console.log("play error", e));
+
+    now.innerText = tracks[i].name;
+    cover.src = "default.jpg";
+
+    render();
+}
+
+/* PLAY/PAUSE */
+window.togglePlay = function(){
+    if(!audio.src) return play(0);
+    audio.paused ? audio.play() : audio.pause();
+}
+
+/* SHUFFLE */
+window.toggleShuffle = function(){
+    shuffle = !shuffle;
+    if(shuffle) loop = false;
+    updateUI();
+}
+
+/* LOOP */
+window.toggleLoop = function(){
+    loop = !loop;
+    if(loop) shuffle = false;
+    updateUI();
+}
+
+/* RANDOM */
+function randomTrack(){
+    let n;
+    do {
+        n = Math.floor(Math.random()*tracks.length);
+    } while(n === current);
+
+    play(n);
+}
+
+/* END */
+audio.onended = ()=>{
+    if(shuffle) return randomTrack();
+    if(current < tracks.length-1) return play(current+1);
+    if(loop) return play(0);
+};
+
+/* PROGRESS */
+audio.addEventListener("timeupdate", ()=>{
+    if(!audio.duration) return;
+
+    progress.style.width = (audio.currentTime/audio.duration)*100 + "%";
+    cur.innerText = fmt(audio.currentTime);
+    dur.innerText = fmt(audio.duration);
+});
+
+/* SEEK */
+window.seek = function(e){
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    audio.currentTime = (x/rect.width)*audio.duration;
+}
+
+/* FORMAT */
+function fmt(t){
+    return Math.floor(t/60)+":"+(Math.floor(t%60)<10?"0":"")+Math.floor(t%60);
+}
+
+/* UI */
+function updateUI(){
+    const s = document.getElementById("shuffleBtn");
+    const l = document.getElementById("loopBtn");
+
+    if(s) s.classList.toggle("active", shuffle);
+    if(l) l.classList.toggle("active", loop);
+}
+
+/* LIST */
+function render(){
+    const list = document.getElementById("list");
+    if(!list) return;
+
+    list.innerHTML = "";
+
+    tracks.forEach((t,i)=>{
+        const d = document.createElement("div");
+        d.className = "track";
+        d.innerText = t.name;
+
+        if(i === current) d.style.border = "2px solid #4da3ff";
+
+        d.onclick = ()=>play(i);
+        list.appendChild(d);
+    });
+}
+
+/* INIT */
+render();
+updateUI();
+
+}); // DOM READY END
+</script>
+
 </body>
 </html>
