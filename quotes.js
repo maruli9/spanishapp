@@ -792,6 +792,444 @@ const quotes = [
     { es: "la", pl: "the" },
     { es: "diferencia", pl: "różnica" }
   ]
+},
+{
+  text: "Buenos días, ¿cómo estás?",
+  translation: "Dzień dobry, jak się masz?",
+  words: [
+    { es: "Buenos", pl: "dobry" },
+    { es: "días", pl: "dzień" },
+    { es: "cómo", pl: "jak" },
+    { es: "estás", pl: "masz się" }
+  ]
+},
+{
+  text: "Buenas noches",
+  translation: "Dobranoc",
+  words: [
+    { es: "Buenas", pl: "dobre" },
+    { es: "noches", pl: "noce" }
+  ]
+},
+{
+  text: "Muchas gracias",
+  translation: "Bardzo dziękuję",
+  words: [
+    { es: "Muchas", pl: "bardzo" },
+    { es: "gracias", pl: "dziękuję" }
+  ]
+},
+{
+  text: "De nada",
+  translation: "Nie ma za co",
+  words: [
+    { es: "De", pl: "za" },
+    { es: "nada", pl: "nic" }
+  ]
+},
+{
+  text: "Por favor",
+  translation: "Proszę",
+  words: [
+    { es: "Por", pl: "proszę" },
+    { es: "favor", pl: "uprzejmość" }
+  ]
+},
+{
+  text: "Lo siento",
+  translation: "Przepraszam",
+  words: [
+    { es: "Lo", pl: "to" },
+    { es: "siento", pl: "przykro mi" }
+  ]
+},
+{
+  text: "No entiendo",
+  translation: "Nie rozumiem",
+  words: [
+    { es: "No", pl: "nie" },
+    { es: "entiendo", pl: "rozumiem" }
+  ]
+},
+{
+  text: "¿Puedes repetir?",
+  translation: "Czy możesz powtórzyć?",
+  words: [
+    { es: "Puedes", pl: "możesz" },
+    { es: "repetir", pl: "powtórzyć" }
+  ]
+},
+{
+  text: "Hablo un poco de español",
+  translation: "Mówię trochę po hiszpańsku",
+  words: [
+    { es: "Hablo", pl: "mówię" },
+    { es: "un", pl: "trochę" },
+    { es: "poco", pl: "mało" },
+    { es: "de", pl: "po" },
+    { es: "español", pl: "hiszpańsku" }
+  ]
+},
+{
+  text: "Quiero un café",
+  translation: "Poproszę kawę",
+  words: [
+    { es: "Quiero", pl: "chcę" },
+    { es: "un", pl: "jedną" },
+    { es: "café", pl: "kawę" }
+  ]
+},
+{
+  text: "Quiero agua",
+  translation: "Chcę wodę",
+  words: [
+    { es: "Quiero", pl: "chcę" },
+    { es: "agua", pl: "wodę" }
+  ]
+},
+{
+  text: "Tengo sed",
+  translation: "Chce mi się pić",
+  words: [
+    { es: "Tengo", pl: "mam" },
+    { es: "sed", pl: "pragnienie" }
+  ]
+},
+{
+  text: "Tengo hambre",
+  translation: "Jestem głodny",
+  words: [
+    { es: "Tengo", pl: "mam" },
+    { es: "hambre", pl: "głód" }
+  ]
+},
+{
+  text: "¿Cuánto cuesta?",
+  translation: "Ile to kosztuje?",
+  words: [
+    { es: "Cuánto", pl: "ile" },
+    { es: "cuesta", pl: "kosztuje" }
+  ]
+},
+{
+  text: "Es muy caro",
+  translation: "To jest bardzo drogie",
+  words: [
+    { es: "Es", pl: "jest" },
+    { es: "muy", pl: "bardzo" },
+    { es: "caro", pl: "drogie" }
+  ]
+},
+{
+  text: "Es muy barato",
+  translation: "To jest bardzo tanie",
+  words: [
+    { es: "Es", pl: "jest" },
+    { es: "muy", pl: "bardzo" },
+    { es: "barato", pl: "tanie" }
+  ]
+},
+{
+  text: "¿Dónde está la estación?",
+  translation: "Gdzie jest stacja?",
+  words: [
+    { es: "Dónde", pl: "gdzie" },
+    { es: "está", pl: "jest" },
+    { es: "la", pl: "the" },
+    { es: "estación", pl: "stacja" }
+  ]
+},
+{
+  text: "Voy al trabajo",
+  translation: "Idę do pracy",
+  words: [
+    { es: "Voy", pl: "idę" },
+    { es: "al", pl: "do" },
+    { es: "trabajo", pl: "pracy" }
+  ]
+},
+{
+  text: "Hoy hace calor",
+  translation: "Dzisiaj jest gorąco",
+  words: [
+    { es: "Hoy", pl: "dzisiaj" },
+    { es: "hace", pl: "jest" },
+    { es: "calor", pl: "gorąco" }
+  ]
+},
+{
+  text: "Hoy hace frío",
+  translation: "Dzisiaj jest zimno",
+  words: [
+    { es: "Hoy", pl: "dzisiaj" },
+    { es: "hace", pl: "jest" },
+    { es: "frío", pl: "zimno" }
+  ]
+},
+{
+  text: "Está lloviendo",
+  translation: "Pada deszcz",
+  words: [
+    { es: "Está", pl: "jest" },
+    { es: "lloviendo", pl: "pada" }
+  ]
+},
+{
+  text: "Hace mucho viento",
+  translation: "Bardzo wieje",
+  words: [
+    { es: "Hace", pl: "jest" },
+    { es: "mucho", pl: "bardzo" },
+    { es: "viento", pl: "wiatr" }
+  ]
+},
+{
+  text: "Me gusta viajar",
+  translation: "Lubię podróżować",
+  words: [
+    { es: "Me", pl: "mi" },
+    { es: "gusta", pl: "podoba się" },
+    { es: "viajar", pl: "podróżować" }
+  ]
+},
+{
+  text: "Me gusta cocinar",
+  translation: "Lubię gotować",
+  words: [
+    { es: "Me", pl: "mi" },
+    { es: "gusta", pl: "podoba się" },
+    { es: "cocinar", pl: "gotować" }
+  ]
+},
+{
+  text: "Me gusta leer libros",
+  translation: "Lubię czytać książki",
+  words: [
+    { es: "Me", pl: "mi" },
+    { es: "gusta", pl: "lubię" },
+    { es: "leer", pl: "czytać" },
+    { es: "libros", pl: "książki" }
+  ]
+},
+{
+  text: "Tengo una pregunta",
+  translation: "Mam pytanie",
+  words: [
+    { es: "Tengo", pl: "mam" },
+    { es: "una", pl: "jedno" },
+    { es: "pregunta", pl: "pytanie" }
+  ]
+},
+{
+  text: "No lo sé",
+  translation: "Nie wiem",
+  words: [
+    { es: "No", pl: "nie" },
+    { es: "lo", pl: "tego" },
+    { es: "sé", pl: "wiem" }
+  ]
+},
+{
+  text: "Estoy cansado",
+  translation: "Jestem zmęczony",
+  words: [
+    { es: "Estoy", pl: "jestem" },
+    { es: "cansado", pl: "zmęczony" }
+  ]
+},
+{
+  text: "Estoy feliz",
+  translation: "Jestem szczęśliwy",
+  words: [
+    { es: "Estoy", pl: "jestem" },
+    { es: "feliz", pl: "szczęśliwy" }
+  ]
+},
+{
+  text: "Estoy ocupado",
+  translation: "Jestem zajęty",
+  words: [
+    { es: "Estoy", pl: "jestem" },
+    { es: "ocupado", pl: "zajęty" }
+  ]
+},
+{
+  text: "Necesito ayuda",
+  translation: "Potrzebuję pomocy",
+  words: [
+    { es: "Necesito", pl: "potrzebuję" },
+    { es: "ayuda", pl: "pomocy" }
+  ]
+},
+{
+  text: "Vamos juntos",
+  translation: "Chodźmy razem",
+  words: [
+    { es: "Vamos", pl: "chodźmy" },
+    { es: "juntos", pl: "razem" }
+  ]
+},
+{
+  text: "Ven conmigo",
+  translation: "Chodź ze mną",
+  words: [
+    { es: "Ven", pl: "chodź" },
+    { es: "conmigo", pl: "ze mną" }
+  ]
+},
+{
+  text: "Hasta mañana",
+  translation: "Do jutra",
+  words: [
+    { es: "Hasta", pl: "do" },
+    { es: "mañana", pl: "jutra" }
+  ]
+},
+{
+  text: "Nos vemos pronto",
+  translation: "Do zobaczenia wkrótce",
+  words: [
+    { es: "Nos", pl: "się" },
+    { es: "vemos", pl: "zobaczymy" },
+    { es: "pronto", pl: "wkrótce" }
+  ]
+},
+{
+  text: "¿Qué hora es?",
+  translation: "Która jest godzina?",
+  words: [
+    { es: "Qué", pl: "która" },
+    { es: "hora", pl: "godzina" },
+    { es: "es", pl: "jest" }
+  ]
+},
+{
+  text: "Son las ocho",
+  translation: "Jest ósma",
+  words: [
+    { es: "Son", pl: "jest" },
+    { es: "las", pl: "" },
+    { es: "ocho", pl: "ósma" }
+  ]
+},
+{
+  text: "Abre la puerta",
+  translation: "Otwórz drzwi",
+  words: [
+    { es: "Abre", pl: "otwórz" },
+    { es: "la", pl: "the" },
+    { es: "puerta", pl: "drzwi" }
+  ]
+},
+{
+  text: "Cierra la ventana",
+  translation: "Zamknij okno",
+  words: [
+    { es: "Cierra", pl: "zamknij" },
+    { es: "la", pl: "the" },
+    { es: "ventana", pl: "okno" }
+  ]
+},
+{
+  text: "Estoy aprendiendo español",
+  translation: "Uczę się hiszpańskiego",
+  words: [
+    { es: "Estoy", pl: "jestem" },
+    { es: "aprendiendo", pl: "ucząc się" },
+    { es: "español", pl: "hiszpańskiego" }
+  ]
+},
+{
+  text: "Necesito practicar más",
+  translation: "Muszę więcej ćwiczyć",
+  words: [
+    { es: "Necesito", pl: "potrzebuję" },
+    { es: "practicar", pl: "ćwiczyć" },
+    { es: "más", pl: "więcej" }
+  ]
+},
+{
+  text: "Todo está listo",
+  translation: "Wszystko jest gotowe",
+  words: [
+    { es: "Todo", pl: "wszystko" },
+    { es: "está", pl: "jest" },
+    { es: "listo", pl: "gotowe" }
+  ]
+},
+{
+  text: "Es una buena idea",
+  translation: "To jest dobry pomysł",
+  words: [
+    { es: "Es", pl: "jest" },
+    { es: "una", pl: "jeden" },
+    { es: "buena", pl: "dobry" },
+    { es: "idea", pl: "pomysł" }
+  ]
+},
+{
+  text: "No pasa nada",
+  translation: "Nic się nie stało",
+  words: [
+    { es: "No", pl: "nie" },
+    { es: "pasa", pl: "dzieje się" },
+    { es: "nada", pl: "nic" }
+  ]
+},
+{
+  text: "Todo saldrá bien",
+  translation: "Wszystko będzie dobrze",
+  words: [
+    { es: "Todo", pl: "wszystko" },
+    { es: "saldrá", pl: "będzie" },
+    { es: "bien", pl: "dobrze" }
+  ]
+},
+{
+  text: "Estoy listo",
+  translation: "Jestem gotowy",
+  words: [
+    { es: "Estoy", pl: "jestem" },
+    { es: "listo", pl: "gotowy" }
+  ]
+},
+{
+  text: "Vamos a empezar",
+  translation: "Zaczynajmy",
+  words: [
+    { es: "Vamos", pl: "chodźmy" },
+    { es: "a", pl: "" },
+    { es: "empezar", pl: "zaczynać" }
+  ]
+},
+{
+  text: "Es muy interesante",
+  translation: "To jest bardzo interesujące",
+  words: [
+    { es: "Es", pl: "jest" },
+    { es: "muy", pl: "bardzo" },
+    { es: "interesante", pl: "interesujące" }
+  ]
+},
+{
+  text: "Me encanta aprender",
+  translation: "Uwielbiam się uczyć",
+  words: [
+    { es: "Me", pl: "mi" },
+    { es: "encanta", pl: "uwielbiam" },
+    { es: "aprender", pl: "uczyć się" }
+  ]
+},
+{
+  text: "Cada día aprendo algo nuevo",
+  translation: "Każdego dnia uczę się czegoś nowego",
+  words: [
+    { es: "Cada", pl: "każdy" },
+    { es: "día", pl: "dzień" },
+    { es: "aprendo", pl: "uczę się" },
+    { es: "algo", pl: "coś" },
+    { es: "nuevo", pl: "nowego" }
+  ]
 }
 
 
