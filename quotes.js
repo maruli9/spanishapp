@@ -1230,7 +1230,150 @@ const quotes = [
     { es: "algo", pl: "coś" },
     { es: "nuevo", pl: "nowego" }
   ]
-}
+},
+{
+  text: "A veces prefiero quedarme en casa para descansar",
+  translation: "Czasami wolę zostać w domu, żeby odpocząć",
+  words: [
+    { es: "A", pl: "czasami" },
+    { es: "veces", pl: "czasami" },
+    { es: "prefiero", pl: "wolę" },
+    { es: "quedarme", pl: "zostać" },
+    { es: "en", pl: "w" },
+    { es: "casa", pl: "domu" },
+    { es: "para", pl: "aby" },
+    { es: "descansar", pl: "odpocząć" }
+  ]
+},
+{
+  text: "Todavía no he terminado el libro que estoy leyendo",
+  translation: "Jeszcze nie skończyłem książki, którą czytam",
+  words: [
+    { es: "Todavía", pl: "jeszcze" },
+    { es: "no", pl: "nie" },
+    { es: "he", pl: "mam" },
+    { es: "terminado", pl: "skończone" },
+    { es: "el", pl: "the" },
+    { es: "libro", pl: "książkę" },
+    { es: "que", pl: "którą" },
+    { es: "estoy", pl: "jestem" },
+    { es: "leyendo", pl: "czytając" }
+  ]
+},
+{
+  text: "Cuando tengo tiempo libre salgo a caminar por el parque",
+  translation: "Kiedy mam wolny czas, wychodzę na spacer do parku",
+  words: [
+    { es: "Cuando", pl: "kiedy" },
+    { es: "tengo", pl: "mam" },
+    { es: "tiempo", pl: "czas" },
+    { es: "libre", pl: "wolny" },
+    { es: "salgo", pl: "wychodzę" },
+    { es: "a", pl: "na" },
+    { es: "caminar", pl: "spacerować" },
+    { es: "por", pl: "po" },
+    { es: "el", pl: "the" },
+    { es: "parque", pl: "parku" }
+  ]
+},
+{
+  text: "Aunque llueva iremos al concierto esta noche",
+  translation: "Nawet jeśli będzie padać, pójdziemy dziś wieczorem na koncert",
+  words: [
+    { es: "Aunque", pl: "chociaż" },
+    { es: "llueva", pl: "będzie padać" },
+    { es: "iremos", pl: "pójdziemy" },
+    { es: "al", pl: "na" },
+    { es: "concierto", pl: "koncert" },
+    { es: "esta", pl: "tego" },
+    { es: "noche", pl: "wieczoru" }
+  ]
+},
+{
+  text: "Nunca imaginé que aprender español fuera tan divertido",
+  translation: "Nigdy nie przypuszczałem, że nauka hiszpańskiego będzie tak przyjemna",
+  words: [
+    { es: "Nunca", pl: "nigdy" },
+    { es: "imaginé", pl: "przypuszczałem" },
+    { es: "que", pl: "że" },
+    { es: "aprender", pl: "uczyć się" },
+    { es: "español", pl: "hiszpańskiego" },
+    { es: "fuera", pl: "byłoby" },
+    { es: "tan", pl: "tak" },
+    { es: "divertido", pl: "przyjemne" }
+  ]
+},
+{
+  text: "Si sales ahora llegarás antes de la reunión",
+  translation: "Jeśli wyjdziesz teraz, dotrzesz przed spotkaniem",
+  words: [
+    { es: "Si", pl: "jeśli" },
+    { es: "sales", pl: "wyjdziesz" },
+    { es: "ahora", pl: "teraz" },
+    { es: "llegarás", pl: "dotrzesz" },
+    { es: "antes", pl: "przed" },
+    { es: "de", pl: "" },
+    { es: "la", pl: "the" },
+    { es: "reunión", pl: "spotkaniem" }
+  ]
+},
+{
+  text: "Mi hermano trabaja desde casa tres días por semana",
+  translation: "Mój brat pracuje z domu trzy dni w tygodniu",
+  words: [
+    { es: "Mi", pl: "mój" },
+    { es: "hermano", pl: "brat" },
+    { es: "trabaja", pl: "pracuje" },
+    { es: "desde", pl: "z" },
+    { es: "casa", pl: "domu" },
+    { es: "tres", pl: "trzy" },
+    { es: "días", pl: "dni" },
+    { es: "por", pl: "w" },
+    { es: "semana", pl: "tygodniu" }
+  ]
+},
+{
+  text: "Cada vez entiendo mejor las conversaciones en español",
+  translation: "Za każdym razem coraz lepiej rozumiem rozmowy po hiszpańsku",
+  words: [
+    { es: "Cada", pl: "każdym" },
+    { es: "vez", pl: "razem" },
+    { es: "entiendo", pl: "rozumiem" },
+    { es: "mejor", pl: "lepiej" },
+    { es: "las", pl: "the" },
+    { es: "conversaciones", pl: "rozmowy" },
+    { es: "en", pl: "po" },
+    { es: "español", pl: "hiszpańsku" }
+  ]
+},
+{
+  text: "Después de cenar solemos ver una película juntos",
+  translation: "Po kolacji zazwyczaj oglądamy razem film",
+  words: [
+    { es: "Después", pl: "po" },
+    { es: "de", pl: "" },
+    { es: "cenar", pl: "kolacji" },
+    { es: "solemos", pl: "zwykle" },
+    { es: "ver", pl: "oglądać" },
+    { es: "una", pl: "jeden" },
+    { es: "película", pl: "film" },
+    { es: "juntos", pl: "razem" }
+  ]
+},
+{
+  text: "Cuanto más practicas más confianza tienes al hablar",
+  translation: "Im więcej ćwiczysz, tym większą masz pewność podczas mówienia",
+  words: [
+    { es: "Cuanto", pl: "im" },
+    { es: "más", pl: "więcej" },
+    { es: "practicas", pl: "ćwiczysz" },
+    { es: "más", pl: "tym bardziej" },
+    { es: "confianza", pl: "pewność" },
+    { es: "tienes", pl: "masz" },
+    { es: "al", pl: "podczas" },
+    { es: "hablar", pl: "mówienia" }
+  ]
+},
 
 
 ];
